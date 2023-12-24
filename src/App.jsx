@@ -51,7 +51,7 @@ function MainContent() {
           to collaborate with you to tackle your most complex challenges and
           drive your success.
         </p>
-        <Button />
+        <Button text="Learn more" />
       </div>
     </main>
   );
@@ -70,7 +70,7 @@ function ProductSection() {
             />
             <h3>Premium Bluetooth Headphones</h3>
             <p className="product-price">2,400 Baht</p>
-            <Button />
+            <Button text="Add to Cart" />
           </div>
           <div className="product-card">
             <img
@@ -79,7 +79,7 @@ function ProductSection() {
             />
             <h3>Classic Leather Watch</h3>
             <p className="product-price">4,000 Baht</p>
-            <Button />
+            <Button text="Add to Cart" />
           </div>
           <div className="product-card">
             <img
@@ -88,7 +88,7 @@ function ProductSection() {
             />
             <h3>Organic Green Tea</h3>
             <p className="product-price">79.99 Baht</p>
-            <Button />
+            <Button text="Add to Cart" />
           </div>
         </div>
       </div>
@@ -104,8 +104,8 @@ function Footer() {
   );
 }
 
-function Button() {
-  return <button className="add-to-cart-button">Add to Cart</button>;
+function Button(props) {
+  return <button className="add-to-cart-button">{props.text}</button>;
 }
 
 function App() {
@@ -120,3 +120,10 @@ function App() {
 }
 
 export default App;
+// Todo 1: ให้แก้ไข Component Button ณ จุดที่ Declare โดยให้แสดงข้อความบนปุ่มที่แตกต่างกันออกไปได้ด้วยการใช้ Prop และกำหนดให้ Prop ชื่อ buttonText
+// Todo 2: ให้กำหนดค่าให้กับ Prop buttonText เป็น “Learn More” เข้าไปใน Component Button ณ จุดที่ Render ปุ่ม “Learn More”
+// Todo 3: ให้กำหนดค่าให้กับ Prop buttonText เป็น “Add to Cart” เข้าไปใน Component Button ณ จุดที่ Render ปุ่ม “Add to Cart” ทั้ง 3 จุดบนหน้าเว็บไซต์
+// Todo 4: ให้แก้ไข Component Button ณ จุดที่ Declare โดยให้แสดง className ที่แตกต่างกันออกไปได้ด้วยการใช้ Prop และกำหนดให้ Prop ชื่อ buttonStyle
+// Todo 5: ให้กำหนดค่าให้กับ Prop buttonStyle เป็น “learn-button” เข้าไปใน Component Button ณ จุดที่ Render ปุ่ม “Learn More”
+// Todo 6: ให้กำหนดค่าให้กับ Prop buttonStyle เป็น “add-to-cart-button” เข้าไปใน Component Button ณ จุดที่ Render ปุ่ม “Add to Cart” ของ Product อันที่ 1 และ 2
+// Todo 7: ให้กำหนดค่าให้กับ Prop buttonStyle พร้อมค่า “add-to-cart-button-secondary” เข้าไปใน Component Button ณ จุดที่ Render ปุ่ม “Add to Cart” ของ Product อันที่ 3
